@@ -3,7 +3,11 @@ def correct_sentence(mystr:str):
     if not mystr[len(mystr) - 1] == ".":
         mystr = mystr+"."
 
-    return mystr.capitalize()
+    if not mystr[0].isupper():
+        mystr = mystr[0].upper() + mystr[1:]
+
+    return mystr
+
 
 print(correct_sentence("greetings, friends"))
 print(correct_sentence("hello"))
