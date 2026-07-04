@@ -3,10 +3,7 @@ import string
 def replace_punkts(text):
     punctuation = string.punctuation.replace("'", "")
 
-    symb_repl = []
-    for symb in text:
-        if symb in punctuation:
-            symb_repl.append(symb)
+    symb_repl = set(punctuation) & set(text)
 
     for symb in symb_repl:
         text = text.replace(symb, " ")
@@ -23,3 +20,4 @@ def first_word(mystring:str)->str:
 
 
 print(replace_punkts("просто текст! Еще текст."))
+
