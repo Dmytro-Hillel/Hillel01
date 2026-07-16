@@ -2,7 +2,7 @@ import random
 
 len_list = random.randint(3,10)
 
-mylist = [len_list]
+mylist = []
 for i in range(len_list-1):
     mylist.append(random.randint(1,10))
 
